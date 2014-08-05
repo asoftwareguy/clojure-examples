@@ -1,0 +1,27 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            url 'http://clojars.org/repo'
+        }
+    }
+
+    dependencies {
+        classpath 'clojuresque:clojuresque:1.7.0'
+    }
+}
+
+apply plugin: 'clojure'
+
+repositories {
+    jcenter()
+    clojarsRepo()
+}
+
+dependencies {
+    compile 'org.clojure:clojure:1.6.0'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
